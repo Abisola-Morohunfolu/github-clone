@@ -1,0 +1,142 @@
+:root {
+	--grey: #1c2125;
+	--grey-mid: #aaa;
+	--light-grey: rgb(224, 224, 224);
+	--red: #f9826c;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
+		Apple Color Emoji, Segoe UI Emoji;
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+.header {
+	display: flex;
+	background-color: var(--grey);
+	padding: 1.5rem 2rem;
+	align-items: center;
+}
+
+svg {
+	fill: #fff;
+	cursor: pointer;
+	transition: fill 0.2s ease-in-out;
+}
+
+svg:hover {
+	fill: var(--grey-mid);
+}
+
+/* HEADER INPUT STYLES */
+.search__input-container {
+	margin-left: 2rem;
+	width: 15%;
+	will-change: auto;
+	transition: all 0.4s ease-in-out;
+}
+
+.search {
+	background-color: transparent;
+	outline: none;
+	padding: 0.5rem;
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: rgb(119, 119, 119);
+	font-family: inherit;
+	color: #fff;
+	border-style: solid;
+	width: 100%;
+	font-weight: 600;
+	font-size: 1.4rem;
+}
+
+.enlarge {
+	width: 25%;
+}
+
+/* NAV STYLES */
+.nav-list {
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+}
+
+.nav-item:not(:last-child) {
+	margin-right: 2rem;
+}
+
+.nav-link {
+	font-family: inherit;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight: 600;
+	transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+	color: var(--grey-mid);
+}
+
+/* HEADER ICONS STYLE */
+.header-icons {
+	display: flex;
+	margin-left: auto;
+}
+
+.icon:not(:last-child) {
+	margin-right: 2rem;
+}
+
+/* MAIN STYLES */
+main {
+	display: flex;
+	padding: 2rem 0;
+}
+
+.profile-section {
+	padding: 2rem;
+}
+
+.user__tabs {
+	display: flex;
+	align-items: center;
+	position: fixed;
+	border-bottom: 1px solid var(--light-grey);
+	justify-content: center;
+	z-index: 100;
+	width: 100%;
+}
+
+.user__tab-item {
+	padding: 0.2rem 3rem;
+	max-height: 4.5rem;
+	border-bottom: 3px solid transparent;
+	cursor: pointer;
+	transition: all 0.3s ease-out;
+}
+
+.user__tab-item:hover {
+	border-bottom: 3px solid var(--light-grey);
+}
+
+.user__tab-item h5 {
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+
+.active-tab {
+	border-bottom: 3px solid var(--red) !important;
+}
+
+.active-tab h5 {
+	font-weight: 600;
+}
